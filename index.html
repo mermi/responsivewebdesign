@@ -36,41 +36,23 @@
 			<div class="slides">
 
 				<section>
-					<h1><img src="img/responsive-web-design-for-mobile-websites.jpg"></h1>
-					<h3></h3>
+					<h2>Responsive Web Design</h2>
+					<img src="img/web-design.jpg">
+					
 					<p>
-						<small>Created by <a href="http://pablocubi.co">Manel Rhaiem</a> / <a href="https://twitter.com/manelbutterfly">@manelbutterfly</a></small>
+						<small>Presented by <a href="http://pablocubi.co">Manel Rhaiem</a> / <a href="https://twitter.com/manelbutterfly">@manelbutterfly</a></small>
 						
 					</p>
-				</section>
-
-				<section>
-					<h2>C'est Quoi ?</h2>
-					<p>
-						
-					</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
 				</section>
 
 				<!-- Example of nested vertical slides -->
 				<section>
 				<section>
-						<h2>Petite Historique..!</h2>
+						<h2>Petit Historique..!</h2>
 						<a href="#" class="image navigate-down">
 							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
 						</a>
 					</section>
-					<section>
-						<h2>Qui a populariser cette</h2><h2>idée</h2>
-						<p>le developpeur <a href="http://ethanmarcotte.com/">Ethan Marcotte</a></p>
-						<img height="350"src="img/ethan.jpg">
-					</section>
-					</section>
-				<section>
-					
 					<section>
 						<h2>Avant</h2>
 						<img  src="img/mobiledesktop.jpg" alt="avant">
@@ -83,7 +65,12 @@
 						</a>
 					</section>
 					<section>
-						<h2>L'Objectif</h2>
+						<h2>Qui a populariser cette</h2><h2>idée</h2>
+						<p>le developpeur <a href="http://ethanmarcotte.com/">Ethan Marcotte</a></p>
+						<img height="350"src="img/ethan.jpg">
+					</section>
+					<section>
+						<h2>L'objectif</h2>
 						<p> un même site doit pouvoir  s’adapter lui-même aux différentes résolutions d’écrans</p>
 						<a href="#/2" class="image">
 							<img  src="img/debut.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
@@ -94,7 +81,7 @@
 				<section>
 					<h2>Les bases</h2>
 					<p>
-						Pour que notre site soit <strong>flexible</strong>
+						Pour que votre site soit <strong>flexible</strong>
 					</p>
 				</section>
 
@@ -102,7 +89,7 @@
 					<h2>La mise en page</h2>
 					
 					<p>Découpez en HTML5</p>
-					<img src="img/decoupez.png">
+					<img height="300" src="img/decoupez.png">
 				
 				</section>
 				<section>
@@ -144,7 +131,7 @@
 				</section>
 				</section>
 				<section>
-				<section data-markdown>
+				<section>
 					<h2>PLus technique maintenant</h2>
 
 				</section>
@@ -156,53 +143,158 @@
 					</p>
 				</section>
 
-				<section id="themes">
+				<section data-markdown>
 					<h2>Intégration</h2>
 					<p>
-						Media Query en HTML
+						Media Query en HTML<br>
 					</p>
-					<img src="img/mediahtml.png">
+					<pre><code>
+						<link rel="stylesheet" media="screen and (max-width:1024px)" rel="stylesheet" href="exemple.css">
+					</code></pre>
 					<p> Media Query avec @import </p>
-					<img src="img/import.png">
+					<pre><code>
+						@import url(exemple.css) screen and (max-width:1024px)
+					</code></pre>
 					<p>Media Query dans une feuille de styles</p>
-					<img src="img/screen.png">
+					<pre>
+						<code>
+							@media screen and (max-width:1024px){/*les différents styles....*/}
+						</code>
+					</pre>
 				</section>
+			
 				<section>
 					<p>mais généralement il est préférable de tabler sur 3 séries à l'aide des medias queries</p>
-					<img src="img/3screen.png">
+						<pre>
+						<code>
+							/*1- pour les tablettes en mode portrait ou 
+							les ordinateurs avec une résolution
+							horizontle de moins de 994px */
+							@media only screen and (min-device-width:786px) 
+							and (orientation: portrait), screen and (max-width:994px)
+							{/* les différents style */}
+							/*2- pour les ordinateurs avec une résolution horizontale de moins de 555px
+							et la plupart des smartphones en mode paysage(480px de large)*/
+							@media screen and (max-width:55px), screen and (max-device-width:480px)
+							{/* les différents style */}
+							/*3- tous les autres appareils avec moins de 320px 
+							de large (principalement les smartphones en mode portrait)*/
+							@media screen and (max-width:320px)
+							{/*les différents styles */}
+						</code>	
+					</pre>
 				</section>	
 				<section>
 					<p>le viewport meta tag</p>
-					<img src="img/viewport.png">
+					<pre>
+						<code>
+							<meta name="wiewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+						</code>
+					</pre>
 				</section>
 			</section>
 
 				<section data-state="customevent">
 					<h2>Exemple</h2>
 						<p>
-							<img width="500" height="300" src="img/exemple.jpeg">
+							<img  src="img/querie.png">
 						</p>
 				</section>
 
 				
 					<section>
-						<h2>Framework</h2>
-						<p>existent plusieur et les plus populaire</p>
+						<section>
+						<h2>Principes de conception</h2>
+						<h2>adaptive</h2>
 						
-						<ol>
-							<li class="fragment"><a href="foundation.zurb.com">Fondation</a></li>
-							<li class="fragment"><a href="http://lessframework.com/">Less Framework 4</a></li>
-							<li class="fragment"><a href="http://webexpedition18.com/articles/responsive-css-frameworks/">Golden Grid System</a></li>
-						</ol>
+						</section>
+						<section>
+							<h2>Les Bibliothéques</h2><h2> de Composant </h2>
+							<ul>
+								<li>Les Framework CSS
+									<ul>
+										<li>
+										<a href="http://960.gs/">
+												960 Grid System
+										</a>
+										</li>	
+										<li>
+											<a href="http://andytaylor.me/2013/04/09/1140px-css-grid-retired/">
+												1140 CSS Grid
+											</a>
+											</li>
+											<li>
+												<a href="http://twitter.github.io/bootstrap/">
+													Twitter Bootstrap
+												</a>
+											</li>
+											<li>
+												<a href="https://www.google.fr/search?q=CSS+Grid">
+													Vous avez l'embarras du choix…
+												</a>
+											</li>
+									</ul>
 
-						<aside class="notes">
+								 </li>
+								 <li>Les composants de Gaïa 
+								 	<ul>
+								 		<li>
+								 			<a href="https://wiki.mozilla.org/Gaia/Design/BuildingBlocks">
+								 				Sur le wiki Mozilla
+								 			</a>
+								 		</li>
+								 		<li>
+								 			<a href="https://github.com/mozilla-b2g/Gaia-UI-Building-Blocks">
+								 				Sur GitHub (Mozilla)
+								 			</a>
+								 		</li>
+								 		<li>
+								 			<a href="http://telefonicaid.github.io/Gaia-UI-Building-Blocks/index.html">
+								 				Sur GitHub (Telefonica)
+								 			</a>
+								 		</li>
+								 	</ul>
+								 </li>
+								</ul>
+								 		<aside class="notes">
 							This slide has fragments which are also stepped through in the notes window.
 						</aside>
+						</section>
+						
+					<section>
+						<h2>Pour bien s'outiller</h2>
+						<img src="img/outil1.png" height="400" style="float:left">
+						<img src="img/outil2.png" height="400" style="float:right">
 					</section>
-
+					<section>
+						<h3>Les pré-processeurs CSS</h3>
+						<ul>
+							<li>
+								LESS :<a href="http://lesscss.org/">http://lesscss.org/</a>
+								<ul>
+									<li><a href="http://incident57.com/less/">LESS.app (Mac)</a></li>
+									<li><a href="http://winless.org">WinLESS (Windows)</a></li>
+								</ul>
+							</li>
+							<li>
+							SASS : <a href="http://sass-lang.com/">	http://sass-lang.com/</a>
+							<ul>
+								<li><a href="http://compass-style.org/">Compass</a></li>
+								<li><a href="http://livereload.com/">LiveReload</a></li>
+								<li><a href="incident57.com/codekit/">CodeKit</a></li>
+							</ul>
+							</li>
+							<li>Stylus :<a href="http://learnboost.github.com/stylus/">http://learnboost.github.com/stylus/</a> </li>
+						</ul>
+					</section>
+					</section>
+					<section>
+						<h3>Question!</h3>
+						<img src="img/question.png">
+					</section>
 				<section>
-					<h2>Merci ! </h2>
-					<img height="400"src="img/merci.jpeg">
+					<p><h3>Merci :)! </h3></p>
+					
 				</section>
 
 			</div>
